@@ -1,0 +1,158 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div id="page">
+		
+              <div class="contentText">
+			  <br>
+          <h1> <p>PHP server is successfully installed and working . <br></p> </h1>
+        </div>
+		<h2>
+</div>
+<br>
+  <div id="header">
+            <h2> PHP Sample Programs </h2>
+            
+        </div>
+ 
+<div ="example">
+<font color="red">
+<h3 >1. Factorial of a number in PHP</h3>
+</font>
+<h3>
+<pre ="prettyprint">
+<font color="blue">
+&lt;?php
+
+$num = 4;
+$factorial = 1;
+for ($x=$num; $x&gt;=1; $x--) 
+{
+  $factorial = $factorial * $x;
+}
+echo &quot;Factorial of $num is $factorial&quot;;
+
+?&gt;
+</font></pre></div></h3>
+
+<form action="fact.php">
+    <input type="submit" value="Output" />
+</form>
+
+<div ="example">
+<font color="red">
+<h3 >2. Verify Whether a number is palindrome </h3>
+</font>
+<h3>
+<pre ="prettyprint">
+<font color="blue">
+&lt;?php
+$num = 121;
+$p=$num;
+$revnum = 0;
+while ($num != 0)
+{
+$revnum = $revnum * 10 + $num % 10;
+//below cast is essential to round remainder towards zero
+$num = (int)($num / 10); 
+}
+ 
+if($revnum==$p)
+{
+echo $p," is Palindrome number";
+}
+else
+{
+echo $p." is not Palindrome number";
+}
+?&gt;
+</font></pre></div></h3>
+
+<form action="palin.php">
+    <input type="submit" value="Output" />
+</form>
+
+<div ="example">
+<font color="red">
+<h3 >3. print fibonacci numbers </h3>
+</font>
+<h3>
+<pre ="prettyprint">
+<font color="blue">
+&lt;?php
+function printFibonacci($n)
+ {
+ 
+  $first = 0;
+  $second = 1;
+ 
+  echo "Fibonacci Series \n";
+ 
+  echo $first.' '.$second.' ';
+ 
+  for($i = 2; $i < $n; $i++){
+ 
+    $third = $first + $second;
+ 
+    echo $third.' ';
+ 
+    $first = $second;
+    $second = $third;
+ 
+    }
+}
+  
+/* Function call to print Fibonacci series upto 6 numbers. */
+ 
+printFibonacci(30);
+?&gt;
+</font></pre></div></h3>
+
+<form action="fibon.php">
+    <input type="submit" value="Output" />
+</form>
+
+
+<div ="example">
+<font color="red">
+<h3 >4. Generating Prime Number </h3>
+</font>
+<h3>
+<pre ="prettyprint">
+<font color="blue">
+&lt;?php
+
+error_reporting(E_ALL);
+
+$num =61;
+
+for( $j = 2; $j <= $num; $j++ )
+{
+for( $k = 2; $k < $j; $k++ )
+{
+if( $j % $k == 0 )
+{
+break;
+}
+
+}
+if( $k == $j )
+echo "Prime Number : ?, $j";
+}
+
+?&gt;
+</font></pre></div></h3>
+
+<form action="prime.php">
+    <input type="submit" value="Output" />
+</form>
+
+
+
+</body>
+</html>
+
